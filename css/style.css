@@ -758,20 +758,20 @@ a {
     border-color: var(--brand-color);
 }
 
-.customers-list .list-item {
+.customers-item {
     flex-basis: calc((100% - 16px)/2);
     width: 190px;
 }
 
 @media screen and (min-width: 768px) {
-    .customers-list .list-item {
+    .customers-item {
         flex-basis: calc((100% - 48px)/3);
         width: 168px;
     }
 }
 
 @media screen and (min-width: 480px) and (max-width:1199px) {
-    .list-item:not(:last-child) {
+    .customers-item:not(:last-child) {
         margin-right: 0;
     }
 }
@@ -989,6 +989,8 @@ a {
     line-height: 24px;
     color: var(--light-bg);
 }
+
+
 
 .item:nth-child(3n) {
     flex-basis: calc((100% - 72px)/3);
