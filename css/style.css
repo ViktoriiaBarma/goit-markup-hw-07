@@ -152,14 +152,12 @@ a {
 }
 
 .header-container {
-    min-height: 80px;
+    min-height: 70px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-}
-@media screen and (min-width:768px) {
     justify-content: space-between;
 }
+
 
 .logo {
     display: block;
@@ -178,36 +176,51 @@ a {
     color: var(--brand-color, purple);
 }
 
-
-
-.navigation {
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
 }
 
+@media screen and (min-width:768px) {
+    
+    .navigation {
+        display: flex;
+        align-items: center;
+    }
 
-.nav-item:not(:last-child) {
-    margin-right: 40px;
+
+    .nav-item:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .nav-link {
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        color: inherit;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+
+        transition: color var(--form);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        color: var(--action-color, purple);
+    }
 }
-
-.nav-link {
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    color: inherit;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-
-    transition: color var(--form);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-    color: var(--action-color, purple);
-}
-
 @media screen and (min-width:768px) {
     .active {
         position: relative;
@@ -230,31 +243,43 @@ a {
 }
 
 
+@media screen and (min-width: 768px) {
 
+    .address-list{
+        display: flex;
+        flex-direction: column;
+    }
+}
 .contact-item+.contact-item {
-    margin-left: 40px;
+    margin-bottom: 4px;
+}
+@media screen (min-width:1200px){
+    .contact-item+.contact-item {
+        margin-left: 40px;
+    }
 }
 
-.contact-link {
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
+@media screen (min-width:768px){
+    .contact-link {
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 24px;
 
-    color: var(--text-color, grey);
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+        color: var(--text-color, grey);
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
 
-    transition: background-color var(--form);
+        transition: background-color var(--form);
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+        color: var(--action-color, purple);
+        text-decoration: none;
+    }
+
 }
-
-.contact-link:hover,
-.contact-link:focus {
-    color: var(--action-color, purple);
-    text-decoration: none;
-}
-
-
 /*Hero section*/
 .hero{
     padding: 112px 0;
