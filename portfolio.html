@@ -21,38 +21,126 @@
   <body>
     <header class="header">
       <div class="container header-container">
-        <!-- навігація-->
-        <nav class="navigation">
-          <a class="logo" href="./index.html">
-            <span class="logo-part">WEB</span>STUDIO</a
+        <a class="logo" href="./index.html">
+          <span class="logo-part">WEB</span>STUDIO</a
+        >
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-          <ul class="list nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Studio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- контакти-->
-        <address>
-          <ul class="list address-list">
-            <li class="contact-item">
-              <a href="mailto:info@devstudio.com" class="contact-link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="contact-item">
-              <a href="tel:+11(000)111-11-11" class="contact-link"
-                >+11(000)111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="tablet">
+          <nav class="navigation">
+            <ul class="list nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Studio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address>
+            <ul class="list address-list">
+              <li class="contact-item">
+                <a href="mailto:info@devstudio.com" class="contact-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contact-item">
+                <a href="tel:+11(000)111-11-11" class="contact-link"
+                  >+11(000)111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+      <!--mobile-->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <span class="icon-close"> </span>
+        </button>
+        <div class="mobile">
+          <nav class="navigation">
+            <ul class="list nav-list">
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Studio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address>
+            <ul class="list address-list">
+              <li class="contact-item">
+                <a href="mailto:info@devstudio.com" class="contact-link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contact-item">
+                <a href="tel:+11(000)111-11-11" class="contact-link"
+                  >+11(000)111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="mobile-sociallink">
+            <ul class="list icon-list">
+              <li class="list-item">
+                <a class="mobile-link" href="instagmam.com">
+                  <svg class="link-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="mobile-link" href="instagmam.com">
+                  <svg class="link-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="mobile-link" href="instagmam.com">
+                  <svg class="link-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="mobile-link" href="instagmam.com">
+                  <svg class="link-icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -349,5 +437,12 @@
         </form>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
