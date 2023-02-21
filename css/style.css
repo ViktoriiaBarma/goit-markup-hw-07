@@ -60,7 +60,7 @@ a {
 }
 
 .container {
-    max-width: 420px;
+    max-width: 428px;
     padding-left: 15px;
     padding-right: 15px;
     margin:0 auto;
@@ -93,8 +93,10 @@ a {
     }
 }
 
-.about {
-    padding-bottom: 0;
+@media screen and (min-width: 768px){
+    .about {
+        padding-bottom: 0;
+    }
 }
 
 .list-item:not(:last-child) {
@@ -152,6 +154,7 @@ a {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+
 }
 @media screen and (min-width:768px) {
     .header-container {
@@ -163,7 +166,7 @@ a {
 
 .logo {
     display: block;
-    margin-right: 249px;
+
 
     font-family: 'Raleway';
     font-weight: 800;
@@ -172,6 +175,7 @@ a {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--headers-color, grey);
+    padding: 24px 0;
 }
 @media screen and (min-width:768px) {
     .logo {
@@ -196,6 +200,7 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0;
+    margin-left: auto;
     padding: 0;
     background-color: transparent;
     cursor: pointer;
@@ -216,7 +221,8 @@ a {
 
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding-top: 80px;
+    padding-left: 40px;
     background-color: #fff;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     z-index: 999;
@@ -261,7 +267,10 @@ a {
     display: none;
 }
 .mobile-nav-list{
-
+    margin-bottom: auto;
+}
+.mobile-nav-list .nav-link{
+    padding: 0;
 }
 .mobile-address-list {
     margin-bottom: 48px;
@@ -294,6 +303,13 @@ a {
 .nav-link:hover,
 .nav-link:focus {
     color: var(--action-color, purple);
+}
+
+.mobile-sociallink .list-item:not(:last-child){
+    margin-right: 56px;
+}
+.mobile-sociallink .icon-list{
+    justify-content: flex-start;
 }
 
 /*tablet*/
@@ -353,7 +369,6 @@ a {
     .address-list{
         display: flex;
         flex-direction: column;
-        padding: 24px 0 10px;
         margin-bottom: 0;
     }
 
@@ -788,6 +803,8 @@ a {
 
 .quality-list .list-item {
     margin-right: 0;
+}
+.quality-list .list-item:not(:last-child) {
     margin-bottom: 72px;
 }
 
@@ -801,6 +818,7 @@ a {
 
     .quality-list .list-item {
         flex-basis: calc((100% - 24px)/2);
+        margin-bottom: 0;
     }
 }
 
@@ -867,28 +885,29 @@ a {
         flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 64px;
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 553px;
+        justify-content: center;
     }
 }
 
 .team-list .list-item {
     margin-bottom: 72px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .icon-list .list-item {
     margin-bottom: 0;
 }
+ .team-list .list-item:not(:last-child) {
+     margin-right: auto;
+ }
 
 @media screen and (min-width: 768px) and (max-width:1199px) {
     .team-list .list-item {
-        flex-basis: calc((100% - 24px)/2);
         margin-bottom: 0;
     }
 
+    .team-list .list-item:not(:last-child) {
+        margin-right: 0;
+    }
     .icon-list .list-item:not(:last-child) {
         margin-right: 24px;
     }
@@ -920,13 +939,11 @@ a {
 
 .icon-list {
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
 }
 
-.icon-list .list-item:not(:last-child) {
-    margin-right: 24px;
-}
+
 
 
 .team-link {
@@ -956,12 +973,19 @@ a {
 }
 
 .box {
+    margin-left: auto;
+    margin-right: auto;
     width: 264px;
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
+@media screen and (min-width: 768px) {
+    .box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 
 /* Customers-section*/
 .customers-list {
@@ -982,6 +1006,10 @@ a {
     .customers-list {
         column-gap: 24px;
         row-gap: 72px;
+    }
+    .customers-container{
+        margin-left: 108px;
+        margin-right: 108px;
     }
 }
 
@@ -1018,6 +1046,7 @@ a {
     width: 190px;
 }
 
+
 @media screen and (min-width: 768px) {
     .customers-item {
         flex-basis: calc((100% - 48px)/3);
@@ -1025,7 +1054,7 @@ a {
     }
 }
 
-@media screen and (min-width: 480px) and (max-width:1199px) {
+@media screen and  (max-width:1199px) {
     .customers-item:not(:last-child) {
         margin-right: 0;
     }
