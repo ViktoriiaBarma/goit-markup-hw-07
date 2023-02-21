@@ -16,8 +16,9 @@ body {
     font-size: 16px;
     color: var(--headers-color, grey);
     background-color: var(--back-color, white);
-    /*overflow: hidden;*/
+
 }
+
 
 .visually-hidden {
     position: absolute;
@@ -93,7 +94,7 @@ a {
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1200px){
     .about {
         padding-bottom: 0;
     }
@@ -219,10 +220,11 @@ a {
     top: 0;
     left: 0;
 
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    padding-top: 80px;
-    padding-left: 40px;
+    padding: 80px 0 40px 40px;
     background-color: #fff;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     z-index: 999;
@@ -230,6 +232,10 @@ a {
     transform: translateX(100%);
     transition: transform var(--form);
 
+}
+
+.mobile-contacts{
+    margin-top: auto;
 }
 
 .menu-container.is-open {
@@ -573,6 +579,8 @@ a {
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
 
+    padding: 96px 18px;
+
     visibility: visible;
     opacity: 1;
     transition: opacity var(--form), visibility var(--form);
@@ -589,14 +597,11 @@ a {
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+
+    transform:  scale(1);
     transition: transform var(--form);
 
-    min-width: 392px;
-    min-height: 586px;
+    
 
     padding: 72px 16px 24px;
 
@@ -604,8 +609,14 @@ a {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
+
 @media screen and (min-width:768px){
     .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         min-width: 408px;
         padding: 72px 24px 24px;
     }
@@ -818,6 +829,8 @@ a {
 
     .quality-list .list-item {
         flex-basis: calc((100% - 24px)/2);
+    }
+    .quality-list .list-item:not(:last-child){
         margin-bottom: 0;
     }
 }
@@ -1331,19 +1344,16 @@ a {
     margin-bottom: 48px;
     border: 1px solid #E7E9FC;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    max-width: 396px;
 }
 
 @media screen and (min-width:768px) {
     .item {
         margin-bottom: 0px;
-        max-width: 356px;
         flex-basis: calc((100% - 24px)/2);
     }
 }
 @media screen and (min-width:1200px) {
     .item {
-        max-width: 360px;
         flex-basis: calc((100% - 48px)/3);
     }
 }
