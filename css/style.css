@@ -631,6 +631,10 @@ a {
 }
 @media screen and (min-width:428px) {
     .modal {
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         min-width: 392px;
     }
 }
@@ -638,10 +642,7 @@ a {
 
 @media screen and (min-width:768px){
     .modal {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        
         max-width: 408px;
         padding: 72px 24px 24px;
     }
