@@ -222,8 +222,8 @@ a {
 
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 80px 0 40px 40px;
     background-color: #fff;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -282,6 +282,22 @@ a {
     margin-bottom: 48px;
 }
 
+.mobile-contact-link{
+    font-weight: 600;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    color: var(--brand-color);
+}
+
+@media screen and (max-width:427px) {
+    .mobile-contact-link {
+        font-size: 24px;
+    }
+}
+
+
 .contact-item:first-child {
     margin-bottom: 40px;
 }
@@ -311,8 +327,14 @@ a {
     color: var(--action-color, purple);
 }
 
+
 .mobile-sociallink .list-item:not(:last-child){
     margin-right: 56px;
+}
+@media screen and (max-width:427px) {
+    .mobile-sociallink .list-item:not(:last-child) {
+        margin-right: 24px;
+    }
 }
 .mobile-sociallink .icon-list{
     justify-content: flex-start;
@@ -453,7 +475,6 @@ a {
 /*Hero section*/
 .hero{
     padding: 112px 0;
-    width: 428px;
     height: 432px;
     background-color: var(--headers-color, grey);
     margin: auto;
@@ -504,7 +525,6 @@ a {
     .hero{
     padding-top: 112px;
     padding-bottom: 108px;
-    width: 768px;
     height: 436px;
     }
 }
@@ -609,6 +629,11 @@ a {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+@media screen and (min-width:428px) {
+    .modal {
+        min-width: 392px;
+    }
+}
 
 
 @media screen and (min-width:768px){
@@ -617,7 +642,7 @@ a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        min-width: 408px;
+        max-width: 408px;
         padding: 72px 24px 24px;
     }
 }
@@ -830,7 +855,7 @@ a {
     .quality-list .list-item {
         flex-basis: calc((100% - 24px)/2);
     }
-    .quality-list .list-item:not(:last-child){
+    .quality-list .list-item:not(:last-child) {
         margin-bottom: 0;
     }
 }
@@ -843,9 +868,10 @@ a {
 
     .quality-list .list-item {
         gap: 24px;
+    }
+    .quality-list .list-item:not(:last-child) {
         margin-bottom: 0;
     }
-
 
 }
 
@@ -1006,6 +1032,7 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -1019,10 +1046,6 @@ a {
     .customers-list {
         column-gap: 24px;
         row-gap: 72px;
-    }
-    .customers-container{
-        margin-left: 108px;
-        margin-right: 108px;
     }
 }
 
@@ -1062,7 +1085,7 @@ a {
 
 @media screen and (min-width: 768px) {
     .customers-item {
-        flex-basis: calc((100% - 48px)/3);
+        flex-basis: calc((100% - 234px)/3);
         width: 168px;
     }
 }
@@ -1093,11 +1116,13 @@ a {
 }
 @media screen and (min-width:768px){
     .case {
+        margin: auto;
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
-        column-gap: 24px;
+        justify-content: center;
         row-gap: 72px;
-        margin-left: 108px;
+        column-gap: 24px;
     }
 }
 @media screen and (min-width:1200px){
@@ -1109,16 +1134,13 @@ a {
     }
 }
 
-.up,.socialmedia,.follow{
+.up,.socialmedia{
     margin-bottom: 72px;
 }
 @media screen and (min-width:768px) {
-    .up {
-            flex-basis: calc((100%-24px)/2);
-        }
-     .up,.socialmedia,.follow{
-        margin-bottom: 0;
-    }   
+    .up,.socialmedia,.follow {
+         margin-bottom: 0;  
+    }
 }
 @media screen and (min-width:1200px) {
     .up {
@@ -1147,7 +1169,7 @@ a {
 
 .tagline {
     
-    width: 268px;
+    width: 264px;
 
     color: #E7E9FC;
     line-height: 1.5;
@@ -1225,7 +1247,8 @@ a {
 
 .follow-input {
     color: #fff;
-    width: 398px;
+    max-width: 398px;
+    width: 100%;
     min-height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -1235,6 +1258,7 @@ a {
     line-height: 2;
     letter-spacing: 0.04em;
     margin-bottom: 16px;
+
 }
 @media screen and (min-width:768px) {
     .follow-input {
